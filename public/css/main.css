@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --white-color: #EEEEEE;
+    --green-color: #76ABAE;
+    --dark-green-color: #31363F;
+    --dark-color: #222831;
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 110vh;
+}
+
+.navbar{
+    position: fixed;
+    background-color: var(--dark-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 200px;
+}
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar a {
+    color: var(--white-color);
+    font-size: 1em;
+    text-decoration: none;
+    margin-left: 30px;
+    cursor: pointer;
+}
+#menu-icon {
+    color: var(--white-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navbar #search-container {
+    float: right;
+}
+
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.navbar #search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: var(--white-color);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
