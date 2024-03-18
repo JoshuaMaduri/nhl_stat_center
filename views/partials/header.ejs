@@ -1,5 +1,5 @@
 <div class="navbar">
-    <h3><a  href="#" id="menu-icon">NHL Stat Center</a><i class="fa-solid fa-hockey-puck"></i></h3>
+    <h3><a  href="#" id="menu-icon">NHL Stat Center </a><i class="fa-solid fa-hockey-puck" style="color: #76abae;"></i></h3>
     <ul class="nav-links">
         <li><a href="/players">Players</a></li>
         <li><a href="/teams">Teams</a></li>
@@ -7,10 +7,9 @@
         <li><a href="/scores">Scores</a></li>
         <li><a href="/standings">Standings</a></li>
     </ul>
-    <div id="search-container">
-        <form action="/results">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
+    <div class="search-bar">
+        <form action="/result" method="post">
+            <input type="text" placeholder="Search.." name="search">
         </form>
     </div>
 </div>
