@@ -34,9 +34,10 @@ body {
     padding: 15px 25px;
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1110px){
     .navbar{
         padding: 12px 15px;
+        justify-content: center;
     }
 }
 
@@ -48,6 +49,18 @@ body {
     font-style: italic;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+@media screen and (max-width: 1110px){
+    #menu-icon{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 500px){
+    #menu-icon{
+        font-size: 1rem;
+        margin: 0;
+    }
 }
 
 .navbar ul li {
@@ -76,10 +89,87 @@ body {
     border-radius: 50px;
     background-color: var(--white-color);
     font-size: 1em;
-    background-image: url('/public/static/images/search-solid.svg');
+    background-image: url('../static/images/search-solid.svg');
+    background-size: 9%;
     background-position: 10px 10px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
 }
 
-  
+@media screen and (max-width: 1110px){
+    .nav-links{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1110px){
+    .search-bar{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .navbar-button{
+        position: absolute;
+        background-image: url(../static/images/icons8-menu-100.svg);
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        margin: 0 20px;
+        cursor: pointer;
+        transition: 0.3 ease;
+    }
+}
+
+.main-content {
+    position: relative;
+    display: flex;
+    padding: 90px 25px 25px 25px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--dark-green-color);
+    justify-content: center;
+}
+
+.main-content .game-preview-bar{
+    position: absolute;
+    padding: 25px;
+    width: 90%;
+    max-height: 10rem;
+    overflow: hidden;
+    background: rgba(238,238,238,0.7);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(238,238,238,0.35);
+    border-radius: 20px;
+    display: flex;
+}
+
+.main-content .game-preview-bar .game-container{
+    position: relative;
+    background: var(--dark-green-color);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    color: var(--white-color);
+    font-family: 'exo';
+    max-width: 15em;
+}
+
+.main-content .game-preview-bar .game-container .game-teams{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.main-content .game-preview-bar .game-container img{
+    height: 50px;
+    width: 50px;
+    border: 1px solid var(--white-color);
+    background-color: var(--white-color);
+    border-radius: 50px;
+}

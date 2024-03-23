@@ -1,0 +1,34 @@
+<div class="game-preview-bar">
+    <% try {%>
+        <% for (let numofgames = 0; numofgames < locals.api_data.games.length; numofgames++){  %>
+            <div class="game-container">
+                <div class="game-container-header">
+                    <%# Dates %>
+                    <% if (locals.api_data.games[numofgames].gameState === "LIVE") {%>
+                        <p>live</p>
+                    <% } else { %>
+                    <% const game_data = locals.api_data.games[numofgames] %>
+                    <% const startTime = moment.utc(game_data.startTimeUTC) %>
+                    <% const venueTime = startTime.clone().utcOffset(game_data.venueUTCOffset)%>
+                    <% const userTime = venueTime.clone().utcOffset(game_data.easternUTCOffset)%>
+                    <p><%= userTime.format('ha') %></p>
+                    <% } %>
+                </div>
+                <div class="game-teams">
+                    <%# Home Team %>
+                    <div class="home-team">
+                        <img src="<%=locals.api_data.games[numofgames].homeTeam.logo%>" alt="<%=locals.api_data.games[numofgames].homeTeam.abbrev%>">
+                        <p><%=locals.api_data.games[numofgames].homeTeam.abbrev%></p>
+                    </div>
+                    <%# Away Team %>
+                    <div class="away-team">
+                        <img src="<%=locals.api_data.games[numofgames].awayTeam.logo%>" alt="<%=locals.api_data.games[numofgames].awayTeam.abbrev%>">
+                        <p><%=locals.api_data.games[numofgames].awayTeam.abbrev%></p>
+                    </div>
+                </div>
+            </div>
+            <% }%>
+    <% } catch { %>
+    
+    <% } %> 
+</div>
