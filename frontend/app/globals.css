@@ -1,0 +1,15 @@
+:root{
+  --HockeyNavyBlue: hsla(210, 100%, 12%, 1);
+  --HockeyIceBlue: hsla(197, 100%, 75%, 1);
+  --SteelGrey: hsla(0, 0%, 67%, 1);
+  --VictoryRed: hsla(3, 100%, 61%, 1);
+  --WhiteSmoke: hsla(0, 0%, 96%, 1);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
