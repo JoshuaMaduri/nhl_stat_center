@@ -1,0 +1,148 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navLink:last-child .submenu {
+  display: none;
+}
+
+.navLink:hover .submenu {
+  display: flex;
+}
+
+.submenuLink {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.submenuLink:hover {
+  background-color: #555;
+  border-radius: 3px;
+}
+
+.iconsContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.burger {
+  display: none; /* Initially hide the burger menu */
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 2; /* Ensure the burger menu is above other content */
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.burger div.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger div.open:nth-child(2) {
+  opacity: 0;
+}
+
+.burger div.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #444;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .burger {
+    display: flex; /* Display burger menu when nav is open */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3; /* Ensure burger menu is above other content */
+  }
+
+  .iconsContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+
+  .searchContainer {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+  }
+
+  .searchBar {
+    background-color: #444;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    width: 150px; /* Adjust width as needed */
+  }
+}

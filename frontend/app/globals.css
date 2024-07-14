@@ -4,6 +4,8 @@
   --SteelGrey: hsla(0, 0%, 67%, 1);
   --VictoryRed: hsla(3, 100%, 61%, 1);
   --WhiteSmoke: hsla(0, 0%, 96%, 1);
+  --GlassmorphBg: rgba(255, 255, 255, 0.2); /* Translucent background */
+  --GlassmorphBorder: rgba(255, 255, 255, 0.4); /* Border color */
 
 }
 
@@ -13,3 +15,5 @@
   box-sizing: border-box;
 
 }
+
+

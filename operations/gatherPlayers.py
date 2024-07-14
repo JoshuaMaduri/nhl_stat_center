@@ -30,7 +30,7 @@ def fetch_players_in_range(start_id, end_id):
 
 # Example usage
 start_id = 8440000
-end_id = 9000000
+end_id = 8500000
 all_players = fetch_players_in_range(start_id, end_id)
 
 # Print all players (example: printing player names)
